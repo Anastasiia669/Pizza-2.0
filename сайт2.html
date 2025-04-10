@@ -1,0 +1,84 @@
+примітка: В класі відео нормально виглядало, але в мене на ноутбуці вони чомусь накладаються одне на одного і не працює збільшення, можливо, це в мене якісь помилки або з комп'ютера буде працювати
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Практична робота</title>
+  <style>
+    <body>
+    .inline-img img { width: 200px; margin: 5px; transition: transform 0.3s; }
+    .inline-img img:hover { transform: scale(1.2); }
+    .multimedia { overflow: auto; }
+    .multimedia-video { display: inline-block; float: left; padding-left: 5px; padding-right: 5px; width: 33.33%; box-sizing: border-box; }
+    .square { width: 90px; height: 90px; margin: 30px auto; background-color: tomato; animation-name: spin; animation-duration: 4s; animation-timing-function: linear; animation-iteration-count: infinite; animation-direction: alternate; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 25% { background-color: darkred; } 100% { transform: rotate(360deg); } }
+    .img-container li { display: inline-block; width: 32%; padding: 10px; }
+    .img-container { text-align: center; margin-top: 20px; width: 100%; }
+    .img-container img { width: 80%; display: inline-block; transition: 0.25s; }
+    .img-container ul li { list-style-type: none; }
+    body {
+
+  background-color: #ffcccc;
+
+  font-family: 'Times New Roman', Times, serif;
+
+  .inline-img img {
+  width: 200px;
+  margin: 5px;
+  transform: scale(0.96);
+  transition: 0.3s;
+  max-width: 35%;
+}
+.inline-img img:hover {
+  transform: scale(1);
+}
+h1, h2 {
+  font-weight: bold; 
+}
+}
+  </style>
+</head>
+  <h1>Піцерія</h1>
+  <div class="img-container">
+    <img src="images/1.jpg" style="float: left; margin: 10px; width: 300px;" alt="Історія Створення">
+    <p>Історія піци починається в Стародавні Греції, коли греки почали випікати великі круглі й плоскі коржі поряд зі звичайним хлібом. Для начинки використовували овочі, фрукти й м'ясо. Згідно етимологічному словнику италійської мови, слово pizza походить від латинського слова pinsere — товкти.</p>
+    <img src="images/2.jpg" style="float: left; margin: 10px; width: 300px;" alt="Цікаві Факти">
+    <p>Гавайська піца побачила світ у 1962 році. Враховуючи, що до цього часу страва стала популярною у всьому світі, почали з’являтися різновиди та варіації з різними начинками. Гавайську піцу винайдено Семом Панопулосом, який відкрив піцерію в Канаді.</p>
+  </div>
+  <h2>Галерея</h2>
+  <div id="main">
+    <div class="img-container">
+      <ul>
+        <li><img src="images/3.jpg" alt=""></li>
+        <li><img src="images/4.jpg" alt=""></li>
+        <li><img src="images/5.jpg" alt=""></li>
+        <li><img src="images/6.jpg" alt=""></li>
+        <li><img src="images/7.jpg" alt=""></li>
+        <li><img src="images/8.jpg" alt=""></li>
+      </ul>
+    </div>
+  </div>
+  <h2>Відео</h2>
+  <div class="multimedia">
+    <div class="multimedia-video">
+      <video controls>
+        <source src="video/movie1.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="multimedia-video">
+      <video controls>
+        <source src="video/movie2.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="multimedia-video">
+      <video controls>
+        <source src="video/movie3.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+  <h2>Анімація</h2>
+  <div class="square"></div>
+</body>
+</html>
